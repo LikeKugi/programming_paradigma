@@ -23,7 +23,7 @@ def merge_sort(numbers: list[int]):
     if len(numbers) < 2:
         return numbers[:]
 
-    middle = int(len(numbers) / 2)
+    middle = len(numbers) // 2
     left = merge_sort(numbers[:middle])
     right = merge_sort(numbers[middle:])
     return merge_lists(left, right)
